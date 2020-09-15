@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap");
+html {
+  height: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100%;
+  margin: 0;
+  padding: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: system, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.05em;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background: radial-gradient(circle, #105455 -30%, #36413c 100%);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: none;
+  -webkit-font-feature-settings: 'pnum' 1, 'kern' 1, 'liga' 1;
+          font-feature-settings: 'pnum' 1, 'kern' 1, 'liga' 1;
+}
+
+h1 {
+  margin: 0;
+  color: #ffff;
+  text-shadow: 0 0 20px #a6b9ba;
+  font-size: 50px;
+  font-weight: 100;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+header {
+  display: block;
+}
+
+.subtitle {
+  margin: 0;
+  color: #a6b9ba;
+  font-size: 25px;
+  font-weight: 200;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+main {
+  padding-bottom: 20px;
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.contacts > li {
+  margin: 15px 0;
+}
+
+.contacts a {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 200;
+  padding-right: 10px;
+  color: #fff;
+  font-size: 17px;
+  text-shadow: none;
+  text-decoration: none;
+  -webkit-transition: .4s all;
+  transition: .4s all;
+}
+
+
+.contacts a:hover {
+  text-shadow: 0 0 15px #fff;
+  color: #a6b9ba;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* min-height: 100%; */
+  margin: 0px;
+  padding: 70px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 700px;
+  height: 500px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  font-size: 24px;    
+}
+.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  z-index: -1;
+}
+.box span:nth-child(1) {
+    transform:rotate(0deg);
+}
+.box span:nth-child(2) {
+    transform:rotate(90deg);
+}
+.box span:nth-child(3) {
+    transform:rotate(180deg);
+}
+.box span:nth-child(4) {
+    transform:rotate(270deg);
+}
+.box span:before {
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 2px;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+    animation: box 4s linear infinite;
+}
+@keyframes box {
+    0% {
+        transform:scaleX(0);
+        transform-origin: left;
+    }
+    60% {
+        transform:scaleX(1);
+        transform-origin: left;
+    }
+    60.1% {
+        transform:scaleX(1);
+        transform-origin: right;
+    }
+    100% {
+        transform:scaleX(0);
+        transform-origin: right;   
+    } 
+}
